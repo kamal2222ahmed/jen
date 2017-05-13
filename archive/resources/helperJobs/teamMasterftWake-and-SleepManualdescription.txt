@@ -1,0 +1,1 @@
+Launch your team functional test environment manually

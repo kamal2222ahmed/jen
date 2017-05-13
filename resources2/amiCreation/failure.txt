@@ -1,0 +1,2 @@
+AMI Creation Job is currently failing, please investigate.
+${BUILD_URL}

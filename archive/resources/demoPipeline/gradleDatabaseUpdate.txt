@@ -1,0 +1,13 @@
+-PbTarPath=./bTar-${BTAR_VERSION}.tar
+-PdatabaseServerPathToTablespace=/u01/oracle/oradata/
+-Djava.security.egd=file:///dev/urandom
+-DbTarVersion=${BTAR_VERSION}
+-PjsonUrl="http://el2-nexus:8080/nexus/service/local/artifact/maven/content?r=public&g=gov.dhs.uscis.elis2&a=InternalApp&v=${BTAR_VERSION}&p=json"
+-DreleaseDeploy=false
+-Penv=${ELIS2ENV}
+-PVersion=${BTAR_VERSION}
+-PkeyFile=${WORKSPACE}/pbe.dat
+-PpbeKeyFile=${WORKSPACE}/pbe.dat
+-Ptoggle=ALL_ON
+-Pnexus=10.103.135.40:8080
+--stacktrace

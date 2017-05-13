@@ -1,0 +1,8 @@
+<center><H1> ELIS2 DB PIPELINE</H1></center>
+
+
+<center><h2>Helpful information: <a href="https://sharedservices.dhs.gov/jira/secure/RapidBoard.jspa?rapidView=381">JIRA</a> <a href="http://elis-git.uscis.dhs.gov/elis2/apps/activity">GIT</a> <a href="http://10.103.130.135:9000">Sonar</a>  <a href="https://sharedservices.dhs.gov/confluence/display/ELIS2/CI+Pipeline">CONFLUENCE/WIKI</a></h2></center>
+<center><h2><a href="https://elis-jenkins.uscis.dhs.gov/view/CI%20Utilities/job/Shutdown-N-Restart-Windows/">Shutdown-N-Restart-Windows-Job-Here</a>
+<center><h2><a href="http://10.103.130.42:8080/jenkins/view/All/job/CI-Seed-Job/">SeedJobCI</a> 
+<center><h2>CONTACT: email <a href="mailto:#ELIS2-SKynet@uscis.dhs.gov">#ELIS2-SKynet@uscis.dhs.gov</a> or on Slack #ci-pipeline #skynet.</h2></center>
+

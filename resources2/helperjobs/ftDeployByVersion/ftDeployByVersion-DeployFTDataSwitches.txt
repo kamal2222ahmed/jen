@@ -1,0 +1,6 @@
+-PpbeKeyFile=${WORKSPACE}/ft/pbe.dat
+-PdatabaseServer=${dbip}
+-PftWebHost=${tcip}
+-Pnexus=${NEXUS}
+-PawsAccessKey=${AWS_ACCESS_KEY_ID}
+-PawsSecretKey=${AWS_SECRET_ACCESS_KEY}

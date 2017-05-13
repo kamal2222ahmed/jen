@@ -1,0 +1,14 @@
+out.println 'Nexus ID: ' + "MSTRBLDTST"
+out.println 'Git Branch: ' + params["GIT_BRANCH_NAME"]
+
+parallel (
+  { 
+    build("Test-Team-ELIS2-BuildGate", NEXUS_ID: "MSTRBLDTST", GIT_BRANCH_NAME: params["GIT_BRANCH_NAME"]) 
+  },
+  { 
+    build("Test-Team-ELIS2-BuildGate-testSonarInt", NEXUS_ID: "MSTRBLDTST", GIT_BRANCH_NAME: params["GIT_BRANCH_NAME"])
+  },
+  {
+    build("DB-Database-Check", NEXUS_ID: "DBBLD", GIT_BRANCH_NAME: params["GIT_BRANCH_NAME"], TARGET_BRANCH: "Staging", SMOKETEST: true)
+  }
+)

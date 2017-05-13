@@ -1,0 +1,2 @@
+<strong>This job facilitates the checkout of your hash, building + compilation of the main code, upload of the build artifacts to nexus and the downstream trigger of the ELIS2-BuildGate-Tests </strong>
+

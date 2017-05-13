@@ -1,0 +1,3 @@
+<strong>This job facilities the deployment of your build artifacts from your execution of the ELIS2-HOTFIX-BuildGateBuild to a chosen FT environment and then the execution of your hash's version of the Gated SmokeTests</strong>
+
+<p><b><font color="red">This job contains all the logs for the test run on the given FT: Traverse to your run and look at the archived artifacts</font></b></p>

@@ -1,0 +1,12 @@
+Greetings,
+
+We’ve successfully deployed the latest Release Candidate to the Live Demo Server. Below are the details to the Live Demo Server and the commit changes included in this deployment.
+
+InternalApp - http://demo-live-elis2.uscis.dhs.gov:8080/InternalApp/login
+Efile - http://demo-live-elis2.uscis.dhs.gov:8080/efile/login
+LockboxTester - http://demo-live-elis2.uscis.dhs.gov:8080/ELISMockServices/LockboxTest
+Database - 10.103.130.100
+
+COMMIT CHANGES
+
+${FILE,path="${WORKSPACE}/gitdiff2.txt"}

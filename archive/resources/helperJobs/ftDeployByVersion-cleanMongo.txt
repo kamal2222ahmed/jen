@@ -1,0 +1,9 @@
+export HTTPS_PROXY=
+export HTTP_PROXY=
+export https_proxy=
+export http_proxy=
+
+mongo ${tcip}:27017/FormDB ${WORKSPACE}/jenkinsutil/mongo_scorch/scorch_formdb.js || true
+
+VERSION=${PROD_VERSION}
+ssh -i $keyToUse -t ec2-user@${dbip} "ls -lart; rm -rf yep.sh; curl -O http://10.103.135.40:8080/nexus/content/repositories/releases/gov/dhs/uscis/elis2/dbExport/yep.sh; ls -lart; chmod a+x *.sh; ./yep.sh ${VERSION}"

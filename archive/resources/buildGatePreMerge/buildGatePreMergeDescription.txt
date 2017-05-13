@@ -1,0 +1,1 @@
+<strong>The Hotfix Branch (Release_Hotfixes) is merged into your CI-* branch. This ensures backwards compatibility with the hotfix branches. <b><font color="blue">This job kicks off the ELIS2-BuildGateFlow</font></b></strong>

@@ -1,0 +1,31 @@
+token=3
+
+rm -f ${WORKSPACE}/deploy.properties
+echo DATABASE=${token} >> ${WORKSPACE}/deploy.properties
+echo GRADLE_USER_HOME=/opt/.gradle/private-${token} >> ${WORKSPACE}/deploy.properties
+
+mkdir -p ${GRADLE_USER_HOME}
+#***********************************************
+npm config set proxy "http://proxy.apps.dhs.gov:80"
+
+cd ${WORKSPACE}/Apps/InternalApp/InternalApp/
+npm-cache install
+cd ${WORKSPACE}/Apps/Shared/Metis/
+npm-cache install
+
+IN="${VERSION}"
+set -- "$IN"
+IFS="."; declare -a Array=($*)
+ALL="${Array[@]}"
+Major="${Array[0]}"
+Minor="${Array[1]}"
+Sprint="${Array[2]}"
+bldnumber="${Array[3]}"
+
+echo "MAJOR=$Major" >> ${WORKSPACE}/deploy.properties
+echo "MINOR=$Minor" >> ${WORKSPACE}/deploy.properties
+echo "SPRINT=$Sprint" >> ${WORKSPACE}/deploy.properties
+echo "BLDNUMBER=$bldnumber" >> ${WORKSPACE}/deploy.properties
+
+
+cat ${WORKSPACE}/deploy.properties

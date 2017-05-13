@@ -1,0 +1,27 @@
+rm -rf logs 
+mkdir logs
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/logs/ -type f -mtime -1 -name 'catalina.out'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/logs/ -type f -mtime -1 -name 'localhost_access_log*'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/efile/log/ -type f -mtime -1 -name 'efile.*'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/InternalApp/log/ -type f -mtime -1 -name 'intApp*'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/lockboxConnector/log/ -type f -mtime -1 -name 'lockbox*'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/lockboxIntegration/log/ -type f -mtime -1 -name 'lockbox*'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/MockServices/log/ -type f -mtime -1 -name 'elisMockServices*'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/ServicesApp/log/servicesApp.log -type f -mtime -1 -name 'servicesApp*'"  >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/ExternalAPI/ -type f -mtime -1 -name 'externalApi*'" >> ${WORKSPACE}/file_list.txt
+ssh -o StrictHostKeyChecking=no -t tomcat7@$demo_server "find /logs/tomcat7/digitalEvidence/ -type f -mtime -1 -name 'digitalEvidence*'" >> ${WORKSPACE}/file_list.txt
+
+while read filename; do
+        scp -o StrictHostKeyChecking=no tomcat7@$demo_server:$filename ${WORKSPACE}/logs;
+done < ${WORKSPACE}/file_list.txt
+cd /logs/tomcat7/logs/
+tail -c 5M catalina.out > catalina.out.short
+rm -rf catalina.out
+mv catalina.out.short catalina.out
+
+cd ..
+tar -czvf ${WORKSPACE}/logs-${BUILD_NUMBER}.gz ${WORKSPACE}/logs
+
+tar -tvf ${WORKSPACE}/logs-${BUILD_NUMBER}.gz
+
+ls -lhart ${WORKSPACE}/logs-${BUILD_NUMBER}.gz

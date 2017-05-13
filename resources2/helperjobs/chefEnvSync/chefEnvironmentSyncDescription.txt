@@ -1,0 +1,1 @@
+Syncs the environments in the ChefRepo with the Chef Server

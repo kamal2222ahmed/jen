@@ -1,0 +1,14 @@
+-ParchiveBranch=develop
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-PdatabaseServerPathToTablespace=/u01/oracle/oradata/
+-PdatabaseServer=el2-ft-idb1.aws.uscis.dhs.gov
+-ParchiveRevision=${BUILD_NUMBER}
+-PbuildVersion=${ARTIFACT_VERSION}
+-PpbeKeyFile=${WORKSPACE}/ft/pbe.dat
+-Ptoggle=ALL_ON
+-PdbNum=${TEAM}
+-PdbType=RDS
+-Pnexus=${NEXUS}
+-PnexusUser=admin
+-PftWebHost=${tcip}
+--info

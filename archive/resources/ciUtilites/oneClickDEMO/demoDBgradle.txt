@@ -1,0 +1,13 @@
+-ParchiveBranch=develop
+-PdatabaseServerPathToTablespace=/u01/oracle/oradata
+-PbTarPath=./bTar-${Version}.tar
+-Djava.security.egd=file:///dev/urandom
+-DbTarVersion=${Version}
+-DreleaseDeploy=false
+-Penv=${ENVIRONMENT}
+-PdatabaseServer=${DBServer}
+-PVersion=${Version}
+-PpbeKeyFile=${WORKSPACE}/Apps/Shared/Crypto/src/main/resources/pbe.dat
+-Ptoggle=ALL_ON
+-PnexusUser=admin
+--info

@@ -1,0 +1,9 @@
+-PreleaseDeploy=false
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-ParchiveBranch=BLD
+-ParchiveRevision=${BUILD_NUMBER}
+-PdatabaseHost=el2-ftits-idb2.c8rl98oavklx.us-east-1.rds.amazonaws.com
+-PdatabaseAdmin=postgres
+-PdatabasePassword=${POSTGRES_PASS}
+-PdatabaseName=itsdev
+-PdatabaseSchema=itsdata

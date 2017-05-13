@@ -1,0 +1,1 @@
+This Job Receives the GitHub Hook when you push to a CI- branch and Gracefully Kicks off the BuildGate Pre-Merge job

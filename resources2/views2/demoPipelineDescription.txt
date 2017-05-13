@@ -1,0 +1,7 @@
+<center><H1><font color="red">  ELIS2 DEMO DEPLOYMENT PAGE</font></H1></center>
+<H2 style="text-align:center;"><strong><font color="black">Home of the various DEMO environment Deploy and Helper jobs</font></strong></H2>
+<H2 style="text-align:center;"><strong><font color="black">Each Demo Environment is scheduled for an automated 8am daily deployment.</font></strong></H2>
+<center><h2>Helpful information: <a href="https://sharedservices.dhs.gov/jira/secure/RapidBoard.jspa?rapidView=381">JIRA</a> <a href="http://elis-git.uscis.dhs.gov/elis2/apps/activity">GIT</a> <a href="http://10.103.130.135:9000">Sonar</a>  <a href="https://sharedservices.dhs.gov/confluence/display/ELIS2/CI+Pipeline">CONFLUENCE/WIKI</a></h2></center>
+<center><h2><a href="https://elis-jenkins.uscis.dhs.gov/view/CI%20Utilities/job/Shutdown-N-Restart-Windows/">Shutdown-N-Restart-Windows-Job-Here</a>
+<center><h2><a href="https://elis-jenkins.uscis.dhs.gov/view/All/job/CI-Seed-CI-Pipeline-Job/">SeedJobCI</a>
+<center><h2>CONTACT: email <a href="mailto:#ELIS2-SKynet@uscis.dhs.gov">#ELIS2-SKynet@uscis.dhs.gov</a> or on Slack #ci-pipeline #skynet.</h2></center>

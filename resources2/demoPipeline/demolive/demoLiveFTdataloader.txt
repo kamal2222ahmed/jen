@@ -1,0 +1,8 @@
+-PpbeKeyFile=${WORKSPACE}/pbe.dat
+-PdatabaseServer=el2-dt-idb1.c8rl98oavklx.us-east-1.rds.amazonaws.com
+-PftWebHost=10.103.130.226
+-Pnexus=${NEXUS}
+-PawsAccessKey=${AWS_ACCESS_KEY_ID}
+-PawsSecretKey=${AWS_SECRET_ACCESS_KEY}
+--stacktrace
+--info

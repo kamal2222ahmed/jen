@@ -1,0 +1,7 @@
+A new Release Candidate has been created from the MASTER branch and is ready for deployment.
+
+You can merge MASTER into your current local branch to receive the most recent updates.
+
+${BUILD_URL}
+
+$PROJECT_DEFAULT_CONTENT

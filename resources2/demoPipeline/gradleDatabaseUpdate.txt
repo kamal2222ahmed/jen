@@ -1,0 +1,16 @@
+-PbTarPath=./bTar-${ELIS2_VERSION}.tar
+-PdatabaseServerPathToTablespace=/u01/oracle/oradata/
+-Djava.security.egd=file:///dev/urandom
+-DbTarVersion=${ELIS2_VERSION}
+-PjsonUrl="http://el2-nexus:8081/repository/public/gov/dhs/uscis/elis2/InternalApp/${Version}/InternalApp-${ELIS2_VERSION}.json"
+-DreleaseDeploy=false
+-Penv=${ELIS2ENV}
+-PVersion=${ELIS2_VERSION}
+-PkeyFile=${WORKSPACE}/pbe.dat
+-PpbeKeyFile=${WORKSPACE}/pbe.dat
+-Ptoggle=ALL_ON
+-Pnexus=${NEXUS}
+-PawsAccessKey=${AWS_ACCESS_KEY_ID}
+-PawsSecretKey=${AWS_SECRET_ACCESS_KEY}
+--stacktrace
+--info

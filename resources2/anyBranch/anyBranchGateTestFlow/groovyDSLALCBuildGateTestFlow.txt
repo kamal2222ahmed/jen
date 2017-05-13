@@ -1,0 +1,38 @@
+out.println 'Attempting Deployment to FT ENV' + params["ENVIRONMENT"] + ' - ' + params["NEXUS_ID"]+ '.' + params["SNAPSHOT_NUMBER"]
+out.println 'Git Branch: ' + params["GIT_BRANCH_NAME"]
+out.println 'Git Branch Hash: ' + params["GIT_BRANCH_HASH"]
+out.println 'Artifact Version: ' + params["SNAPSHOT_NUMBER"]
+out.println 'Environment: ' +  params["ENVIRONMENT"]
+out.println 'Starting Build Gate Test Run'
+
+
+retry ( 2 )
+{
+    build ("FT-MADNESS-OneADOBE-Fix-FTs-Job", NEXUS_ID: "BLD", BRANCH: params["GIT_BRANCH_NAME"], ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], ENVIRONMENT:  params["ENVIRONMENT"], TOGGLE: "ALL_ON", MYSQL_PASSWORD: "jenkins", MYSQL_USER: "jenkins")
+}
+
+out.println 'Starting Test Run'
+
+parallel(
+  {
+    build ("ELIS2-TestSuite-Lockbox", GIT_BRANCH_NAME: params["SNAPSHOT_NUMBER"], GIT_BRANCH_HASH: params["SNAPSHOT_NUMBER"], NEXUS_ID: params["NEXUS_ID"], ENVIRONMENT: params["ENVIRONMENT"], IS_SNAPSHOT: true, ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], SNAPSHOT_NUMBER: params["SNAPSHOT_VERSION"])
+  },
+  {
+    build ("ELIS2-TestSuite-I131", GIT_BRANCH_NAME: params["SNAPSHOT_NUMBER"], GIT_BRANCH_HASH: params["SNAPSHOT_NUMBER"], NEXUS_ID: params["NEXUS_ID"], ENVIRONMENT: params["ENVIRONMENT"], IS_SNAPSHOT: true, ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], SNAPSHOT_NUMBER: params["SNAPSHOT_VERSION"])
+  },
+  {
+    build ("ELIS2-TestSuite-IV", GIT_BRANCH_NAME: params["SNAPSHOT_NUMBER"], GIT_BRANCH_HASH: params["SNAPSHOT_NUMBER"], NEXUS_ID: params["NEXUS_ID"], ENVIRONMENT: params["ENVIRONMENT"], IS_SNAPSHOT: true, ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], SNAPSHOT_NUMBER: params["SNAPSHOT_VERSION"])
+  },
+  {
+    build ("ELIS2-TestSuite-DACA", GIT_BRANCH_NAME: params["SNPASHOT_NUMBER"], GIT_BRANCH_HASH: params["SNAPSHOT_NUMBER"], NEXUS_ID: params["NEXUS_ID"], ENVIRONMENT: params["ENVIRONMENT"], IS_SNAPSHOT: true, ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], SNAPSHOT_NUMBER: params["SNAPSHOT_VERSION"])
+  },
+  {
+    build ("ELIS2-TestSuite-N400", GIT_BRANCH_NAME: params["SNAPSHOT_NUMBER"], GIT_BRANCH_HASH: params["SNAPSHOT_NUMBER"], NEXUS_ID: params["NEXUS_ID"], ENVIRONMENT: params["ENVIRONMENT"], IS_SNAPSHOT: true, ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], SNAPSHOT_NUMBER: params["SNAPSHOT_VERSION"])
+  },
+  {
+    build ("ELIS2-TestSuite-DigitalEvidence", GIT_BRANCH_NAME: params["SNAPSHOT_NUMBER"], GIT_BRANCH_HASH: params["SNAPSHOT_NUMBER"], NEXUS_ID: params["NEXUS_ID"], ENVIRONMENT: params["ENVIRONMENT"], IS_SNAPSHOT: true, ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], SNAPSHOT_NUMBER: params["SNAPSHOT_VERSION"])
+  },
+  {
+    build ("ELIS2-TestSuite-I90", GIT_BRANCH_NAME: params["SNAPSHOT_NUMBER"], GIT_BRANCH_HASH: params["SNAPSHOT_NUMBER"], NEXUS_ID: params["NEXUS_ID"], ENVIRONMENT: params["ENVIRONMENT"], IS_SNAPSHOT: true, ARTIFACT_VERSION: params["SNAPSHOT_NUMBER"], SNAPSHOT_NUMBER: params["SNAPSHOT_VERSION"])
+  }
+)

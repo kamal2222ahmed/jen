@@ -1,0 +1,9 @@
+This phase starts the ELIS2-StagingGateFlow which will perform a checkout of the head of the Staging branch Pre-Merging Integration and master locally to ensure fast-forward compatibility. If that is successful the following two jobs will be kicked off in parallel:
+<p>
+&nbsp; &nbsp;&nbsp; &nbsp;<strong>S-1. ELIS2-StagingGateBuild</strong> - This job facilitates the checkout of the HEAD commit of the Staging branch, Pre-Merging Integration and master locally, building + compilation of the code, upload of the build artifacts to nexus and the downstream trigger of the <strong>ELIS2-StagingGate-Tests</strong></p>
+
+    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>S-1a. ELIS2-StagingGateTests </strong>- This job facilities the deployment of the build artifacts from S-1 to a chosen FT environment and then the execution of the S-1 version of the Gated SmokeTests 
+<p>
+&nbsp; &nbsp;&nbsp; &nbsp;<strong>S-2. ELIS2-StagingGateBuild-testSonarInt </strong>- This job facilitates the checkout of the HEAD of the Staging branch, building + compilation of the code, the execution of all unit and integration tests, and the preview analysis of the sonar-runner.
+<p>
+<strong>If successful the ELIS2-StagingGateFlow will formally promote the Head of Staging to the Integration and master branch. This action will trigger the ELIS2-IntegrationGateFlow</strong>

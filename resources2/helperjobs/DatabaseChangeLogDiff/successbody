@@ -1,0 +1,6 @@
+Database Subtree has changed in master.
+
+Production Version: $PRODUCTION_VERSION
+Master Version: $CURRENT_MASTER_TAG
+
+Changes to the Database + User Story or JIRA Incident Ticket is associated with is contained within the changelog.txt file

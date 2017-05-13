@@ -1,0 +1,12 @@
+-PbTarPath=./bTar-${Version}.tar
+-Djava.security.egd=file:///dev/urandom
+-DbTarVersion=${Version}
+-DreleaseDeploy=false
+-Penv=DEMOMOCK
+-PVersion=${Version}
+-PpbeKeyFile=${WORKSPACE}/demomock/pbe.dat
+-Ptoggle=ALL_ON
+-PnexusUser=admin
+-PawsAccessKey=${AWS_ACCESS_KEY_ID}
+-PawsSecretKey=${AWS_SECRET_ACCESS_KEY}
+--stacktrace

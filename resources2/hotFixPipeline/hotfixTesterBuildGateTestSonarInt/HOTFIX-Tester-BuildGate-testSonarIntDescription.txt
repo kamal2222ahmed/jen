@@ -1,0 +1,1 @@
+Tester job which test tests and Sonar Analysis the ELIS2 App for the Build Gate tests

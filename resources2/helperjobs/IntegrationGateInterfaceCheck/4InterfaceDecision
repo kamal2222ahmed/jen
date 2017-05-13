@@ -1,0 +1,29 @@
+#!/bin/bash
+cd ${WORKSPACE}/Apps/
+PRODUCTION_VERSION=`../jenkinsutil/grepVersion/get_latest_prod_version.rb`
+inputFile="${MAJOR}.${MINOR}.${SPRINT}.${BUILD_NUMBER}-input.txt"
+outputFile="${MAJOR}.${MINOR}.${SPRINT}.${BUILD_NUMBER}-output.txt"
+
+
+while read -r className
+do
+  #  echo "Name read from file - $className"
+    pathToFile=$(find . -name $className | grep main)
+ #   echo "Full path - $pathToFile"
+    git diff --name-status ${PRODUCTION_VERSION}..HEAD $pathToFile >> "$outputFile"
+done &lt; "$inputFile"
+
+rm -rf ${WORKSPACE}/interface.txt
+
+if [ -s "$outputFile" ];
+then
+   echo "Check=Interface-Test-NEEDED" >> ${WORKSPACE}/interface.txt
+   echo "^%^%^%^%^%^^%^%^%^^^%^%^%^%^%^%^%^^%^%^%^%^%^%^%^^%^%^%^^%^%^%^^%^%^%^%^^%^%^^%^%^%^^%"
+   echo "YOU MUST DO LIVE INTERFACE TESTING IN PRE PROD!!!!"
+   echo "^%^%^%^%^%^^%^%^%^^^%^%^%^%^%^%^%^^%^%^%^%^%^%^%^^%^%^%^^%^%^%^^%^%^%^%^^%^%^^%^%^%^^%"
+else
+   echo "Check=No-Interface-Test-Needed" >> ${WORKSPACE}/interface.txt
+   echo "*********************************************"
+   echo "You are cleared from live interface testing**"
+   echo "*********************************************"
+fi

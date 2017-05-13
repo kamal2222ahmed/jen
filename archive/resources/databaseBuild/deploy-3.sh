@@ -1,0 +1,1 @@
+knife ssh "chef_environment:${ENVIRONMENT} AND role:Deployable" -C 2 -a ipaddress -x chef "sudo chef-client -j \"http://${NEXUS}/nexus/service/local/artifact/maven/content?r=public&g=gov.dhs.uscis.elis2&a=InternalApp&v=${ARTIFACT_VERSION}&p=json\""

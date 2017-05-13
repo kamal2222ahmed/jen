@@ -1,0 +1,1 @@
+Deploys desired release canidate to the DEMO LIVE environment.

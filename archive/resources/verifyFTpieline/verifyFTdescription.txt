@@ -1,0 +1,1 @@
+Runs the functional test flow associated with the BUILD GATE against a given version of code on a given environment

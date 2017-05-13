@@ -1,0 +1,10 @@
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-ParchiveRevision=${BUILD_NUMBER}
+-ParchiveBranch=${NEXUS_ID}
+-PcodeCoverageType=xml
+-Ptls.key.store=/opt/keystore/JavaKeyStore.jks
+-Ptls.trusted.store=/opt/keystore/JavaKeyStore.jks
+-PpbeKeyFile=${WORKSPACE}/Apps/Shared/Crypto/src/main/resources/pbe.dat
+-PdbNum=${DATABASE}
+-PreleaseDeploy=false
+--stacktrace

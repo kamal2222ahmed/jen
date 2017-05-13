@@ -1,0 +1,38 @@
+#if [ -f /opt/semaphore/executors.db ]
+##     then
+#          echo "executors.db already exists."
+#     else
+#          echo "executors.db does not exist."
+#          if [ ! -d /opt/semaphore/ ]; then
+#               mkdir /opt/semaphore/
+#          fi
+#          cd /opt/semaphore/
+#          sqlite3 executors.db
+#          sqlite3 executors.db "CREATE TABLE executors(executor INTEGER NOT NULL UNIQUE);"
+#          COUNTER=1
+#          while [  $COUNTER -le ${NUM_EXECUTORS} ]; do
+#               sqlite3 executors.db "INSERT INTO executors VALUES(${COUNTER});"
+#               let COUNTER=COUNTER+1
+#          done
+#fi
+#echo "Getting an Executor"
+#cd /opt/semaphore/
+#numTokens=`sqlite3 executors.db "SELECT COUNT(*) FROM executors"`
+
+#b=true
+#while [  $numTokens -lt 1 ]; do
+#   sleep 10
+#   echo The number of available executors is $numTokens
+#   numTokens=`sqlite3 executors.db "SELECT COUNT(*) FROM executors"`
+#done
+
+#while $b; do
+#  sleep 1 && token=`sqlite3 executors.db "SELECT * FROM executors LIMIT 1"` && sqlite3 executors.db "DELETE FROM executors WHERE executor=$token;" && b=false
+#done
+
+token=3
+rm -f ${WORKSPACE}/deploy.properties
+echo DATABASE=${token} >> ${WORKSPACE}/deploy.properties
+echo GRADLE_USER_HOME=/opt/.gradle/private-${token} >> ${WORKSPACE}/deploy.properties
+
+mkdir -p ${GRADLE_USER_HOME}

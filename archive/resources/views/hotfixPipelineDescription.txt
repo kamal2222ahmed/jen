@@ -1,0 +1,8 @@
+<center><H1> ELIS2 CI HOTFIX PIPELINE</H1></center>
+
+
+<center><h2>Helpful information: <a href="https://sharedservices.dhs.gov/jira/secure/RapidBoard.jspa?rapidView=381">JIRA</a> <a href="http://elis-git.uscis.dhs.gov/elis2/apps/activity">GIT</a> <a href="http://elis-confluence.uscis.dhs.gov/display/CIP/Your+Guide+to+Sonar">Sonar</a>  <a href="https://sharedservices.dhs.gov/confluence/display/ELIS2/CI+Pipeline">CONFLUENCE/WIKI</a></h2></center>
+ 
+<center><h2>CONTACT: email <a href="mailto:#ELIS2-SKynet@uscis.dhs.gov">#ELIS2-SKynet@uscis.dhs.gov</a> or on Slack #ci-pipeline #skynet.</h2></center>
+
+

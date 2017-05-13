@@ -1,0 +1,5 @@
+Jenkins could not integrate ($GIT_COMMIT) at this time.  A new master build could have failed to be properly created.
+
+Please see the job output to determine the appropriate remediation.
+
+$PROJECT_DEFAULT_CONTENT

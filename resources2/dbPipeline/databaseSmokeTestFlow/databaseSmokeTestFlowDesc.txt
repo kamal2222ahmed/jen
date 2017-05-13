@@ -1,0 +1,1 @@
+<strong>This is a flow that triggers the DB smokes test job. Currently this job is only triggered from the Staging Gate</strong>

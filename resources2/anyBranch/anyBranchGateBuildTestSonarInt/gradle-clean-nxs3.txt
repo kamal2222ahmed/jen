@@ -1,0 +1,19 @@
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-ParchiveRevision=${BUILD_NUMBER}
+-ParchiveBranch=${NEXUS_ID}
+-PcodeCoverageType=${CODE_COVERAGE_TYPE}
+-Ptls.key.store=${TLS_KEY_STORE}
+-Ptls.trusted.store=${TLS_TRUSTED_STORE}
+-PpbeKeyFile=${WORKSPACE}/Apps/Shared/Crypto/src/main/resources/pbe.dat
+-PdbNum=${DATABASE}
+-Dawsmock.directory=/tmp
+-Dsonar.analysis.mode=${SONAR_ANALYSIS_MODE}
+-Dorg.gradle.jvmargs="-Xms2048m -Xmx8196m"
+-Psonar=${SONAR_SERVER_URL}
+-Pnexus=${NEXUS}
+-PmaxParallelForks=1
+-PawsAccessKey=${AWS_ACCESS_KEY_ID}
+-PawsSecretKey=${AWS_SECRET_ACCESS_KEY}
+--parallel
+--stacktrace
+--profile

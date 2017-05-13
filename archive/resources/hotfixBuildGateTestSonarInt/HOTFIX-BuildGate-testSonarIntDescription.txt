@@ -1,0 +1,1 @@
+Test Tests and Sonar Analysis the ELIS2 App for the Hotfix BUILD GATE TESTS

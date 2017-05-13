@@ -1,0 +1,3 @@
+#Updates to FT Pool
+set +x
+mysql -D jenkins -u jenkins -p${MYSQL_CRED} -h ${MYSQL_HOST} --disable-column-name --execute "update environments set state='${STATE}' where name='${ENVIRONMENT}'"

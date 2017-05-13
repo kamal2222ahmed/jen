@@ -1,0 +1,7 @@
+Good Morning,
+
+We’ve successfully deployed the latest Master Build Version to the Demo Mock MyUSCIS Server. Below are the commit changes included in this deployment.
+
+COMMIT CHANGES
+
+${FILE,path="${WORKSPACE}/gitdiff2.txt"}

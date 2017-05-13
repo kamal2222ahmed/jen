@@ -1,0 +1,1 @@
+<strong>This job facilitates the checkout of the HEAD of the Staging branch, building + compilation of the code, the execution of all unit and integration tests, and the preview analysis of the sonar-runner.</strong>

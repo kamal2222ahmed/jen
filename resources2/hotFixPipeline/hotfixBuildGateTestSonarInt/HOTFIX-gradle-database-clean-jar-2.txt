@@ -1,0 +1,13 @@
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-ParchiveRevision=${BUILD_NUMBER}
+-ParchiveBranch=${NEXUS_ID}
+-PcodeCoverageType=xml
+-Ptls.key.store=/opt/keystore/JavaKeyStore.jks
+-Ptls.trusted.store=/opt/keystore/JavaKeyStore.jks
+-PpbeKeyFile=${WORKSPACE}/Apps/Shared/Crypto/src/main/resources/pbe.dat
+-PdbNum=${DATABASE}
+-Pnexus=${NEXUS}
+-PreleaseDeploy=false
+-PawsAccessKey=${AWS_ACCESS_KEY_ID}
+-PawsSecretKey=${AWS_SECRET_ACCESS_KEY}
+--stacktrace

@@ -1,0 +1,7 @@
+echo "getting logs and configuration files from ${ENVIRONMENT}"
+rm -rf logs conf
+mkdir logs
+mkdir conf
+cd logs
+
+export tcip=`knife search node "chef_environment:${ENVIRONMENT} AND recipe:tomcat-conf" -F json -a ipaddress | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'`

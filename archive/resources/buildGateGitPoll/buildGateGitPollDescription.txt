@@ -1,0 +1,2 @@
+<strong>This job polls the git.uscis.dhs.gov:uscis/elis-apps.git repo on a set interval and checks for changes in hashes for branches that start with CI-* or CI501-* that have been updated since the last run.</strong><p>
+<strong>Upon the job finding a change, it will trigger the ELIS2-BuildGate-PreMerge job</strong>

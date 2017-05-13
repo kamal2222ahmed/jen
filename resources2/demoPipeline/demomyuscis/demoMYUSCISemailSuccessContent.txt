@@ -1,0 +1,12 @@
+Good Morning,
+
+We have successfully deployed the latest Master Build Version to the Demo Mock MyUSCIS Server. Below are the commit changes included in this deployment.
+
+InternalApp - http://demo-myuscis-elis2.uscis.dhs.gov:8080/InternalApp/login
+Efile - http://demo-myuscis-elis2.uscis.dhs.gov:8080/efile/login
+LockboxTester - http://demo-myuscis-elis2.uscis.dhs.gov:8080/ELISMockServices/LockboxTest
+Database - 10.103.130.145
+
+COMMIT CHANGES
+
+${FILE,path="${WORKSPACE}/gitdiff2.txt"}

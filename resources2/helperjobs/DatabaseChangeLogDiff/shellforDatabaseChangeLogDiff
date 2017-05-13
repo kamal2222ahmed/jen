@@ -1,0 +1,20 @@
+cd Apps
+
+PRODUCTION_TAG=`${WORKSPACE}/jenkinsutil/grepVersion/get_latest_prod_version.rb`
+echo "production version:"$PRODUCTION_TAG
+rm -rf ${WORKSPACE}/properties_to_inject.txt
+echo "PRODUCTION_TAG=$PRODUCTION_TAG" >> ${WORKSPACE}/properties_to_inject.txt
+rm -rf ${WORKSPACE}/changelog.txt
+PROD_COMMIT_HASH=`git rev-list -n 1 "refs/tags/$PRODUCTION_TAG"`
+CURRENT_MASTER_HASH=`git log -n 1 --pretty=format:"%H" refs/remotes/origin/master`
+CURRENT_MASTER_TAG=`git tag --contains $CURRENT_MASTER_HASH`
+echo $PROD_COMMIT_HASH
+echo $CURRENT_MASTER_HASH
+echo "CURRENT_MASTER_HASH=$CURRENT_MASTER_HASH" >> ${WORKSPACE}/properties_to_inject.txt
+echo "PROD_COMMIT_HASH=$PROD_COMMIT_HASH" >> ${WORKSPACE}/properties_to_inject.txt
+echo "CURRENT_MASTER_TAG=$CURRENT_MASTER_TAG" >> ${WORKSPACE}/properties_to_inject.txt
+echo "PRODUCTION_VERSION=$PRODUCTION_TAG" >> ${WORKSPACE}/properties_to_inject.txt
+
+sleep 10
+git log --no-merges -p $PROD_COMMIT_HASH..$CURRENT_MASTER_HASH Database/oracle > changelog.txt
+echo "changes are: `cat changelog.txt`"

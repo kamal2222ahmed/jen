@@ -1,0 +1,10 @@
+-PbTarPath=./bTar-${Version}.tar
+-Djava.security.egd=file:///dev/urandom
+-DbTarVersion=${Version}
+-DreleaseDeploy=false
+-Penv=DEMOLOCKBOX
+-PVersion=${Version}
+-PpbeKeyFile=${WORKSPACE}/DemoMockLockbox/pbe.dat
+-Ptoggle=ALL_ON
+-PnexusUser=admin
+--stacktrace

@@ -1,0 +1,13 @@
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-ParchiveRevision=${BUILD_NUMBER}
+-ParchiveBranch=${NEXUS_ID}
+-PcodeCoverageType=${CODE_COVERAGE_TYPE}
+-Ptls.key.store=${TLS_KEY_STORE}
+-Ptls.trusted.store=${TLS_TRUSTED_STORE}
+-PpbeKeyFile=${WORKSPACE}/Apps/Shared/Crypto/src/main/resources/pbe.dat
+-PdbNum=${DATABASE}
+-Pnexus=10.193.129.166:8081
+-PmaxParallelForks=1
+--parallel-threads=1
+--stacktrace
+--profile

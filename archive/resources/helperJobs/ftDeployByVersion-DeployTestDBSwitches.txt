@@ -1,0 +1,11 @@
+-ParchiveBranch=develop
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-PdatabaseServerPathToTablespace=/u01/oracle/oradata/
+-PdatabaseServer=${dbip}
+-ParchiveRevision=${BUILD_NUMBER}
+-PbuildVersion=${ARTIFACT_VERSION}
+-PpbeKeyFile=${WORKSPACE}/ft/pbe.dat
+-Ptoggle=ALL_ON
+-Pnexus=${NEXUS}
+-PnexusUser=admin
+-PftWebHost=${tcip}

@@ -1,0 +1,14 @@
+-ParchiveBranch=develop
+-ParchiveBuildNumber=${BUILD_NUMBER}
+-PdatabaseServerPathToTablespace=/u01/oracle/oradata/
+-PdatabaseServer=${dbip}
+-ParchiveRevision=${BUILD_NUMBER}
+-PbuildVersion=${EXTRACT_VERSION}
+-PpbeKeyFile=${WORKSPACE}/ft/pbe.dat
+-Ptoggle=ALL_ON
+-Pnexus=${NEXUS}
+-PnexusUser=admin
+-PftWebHost=${tcip}
+-PawsAccessKey=${AWS_ACCESS_KEY_ID}
+-PawsSecretKey=${AWS_SECRET_ACCESS_KEY}
+--info
