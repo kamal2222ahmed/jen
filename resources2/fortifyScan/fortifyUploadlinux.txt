@@ -1,7 +1,0 @@
--PpbeKeyFile=${WORKSPACE}/Apps/Shared/Crypto/src/main/resources/pbe.dat
--PfortifyToken=${fortifyUploadToken}
--PfortifyWorkers=1
--PfortifyXmx=30G
--PfortifyUrl=https://fortifyssc.uscis.dhs.gov/ssc
--PfortifyVersion=Master
---stacktrace

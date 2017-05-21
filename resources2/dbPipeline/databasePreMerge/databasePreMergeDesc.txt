@@ -1,1 +1,0 @@
-<strong>This job builds the database archive from your branch and builds code from the CI-IntFix branch. The artifacts are then uploaded to nexus</strong>

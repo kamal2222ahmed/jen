@@ -1,3 +1,0 @@
-The Demo Live Deployment Failed for version $Version
-
-Please Investigate.

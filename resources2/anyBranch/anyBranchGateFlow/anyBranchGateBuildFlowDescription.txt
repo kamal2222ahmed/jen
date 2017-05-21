@@ -1,7 +1,0 @@
-This phase starts the ELIS2-anyBranchGateFlow which will perform a checkout of the hash from your branch and Pre-Merging Staging locally to ensure fast-forward compatibility. If that is successful the following two jobs will be kicked off in parallel:
-<p>
-&nbsp; &nbsp;&nbsp; &nbsp;<strong>B-1. ELIS2-anyBranchGateBuild</strong> - This job facilitates the checkout of your hash, building + compilation of the code, upload of the build artifacts to nexus and the downstream trigger of the <strong>ELIS2-anyBranchGate-Tests</strong></p>
-
-    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>B-1a. ELIS2-anyBranchGateTests </strong>- This job facilities the deployment of your build artifacts from your execution of the ELIS2-anyBranchGateBuild to a chosen FT environment and then the execution of your hash's version of the Gated SmokeTests
-<p>
-&nbsp; &nbsp;&nbsp; &nbsp;<strong>B-2. ELIS2-anyBranchGateBuild-testSonarInt </strong>- This job facilitates the checkout of your hash, building + compilation of the code, the execution of all unit and integration tests, and the preview analysis of the sonar-runner

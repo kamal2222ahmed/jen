@@ -1,1 +1,0 @@
-Home of the various DEMO environment Deploy and Helper jobs. (Each Demo Environment is scheduled for an automated 8am daily deployment)

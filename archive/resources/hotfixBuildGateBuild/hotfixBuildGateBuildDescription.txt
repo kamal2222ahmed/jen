@@ -1,1 +1,0 @@
-Builds the ELIS2 App for the HOTFIX BUILD GATE

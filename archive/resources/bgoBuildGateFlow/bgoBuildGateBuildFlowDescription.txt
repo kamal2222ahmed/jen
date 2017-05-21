@@ -1,1 +1,0 @@
-The phase starts the ELIS2-BGO-BuildGateFlow which triggers the ELIS2-BGO-BuildGateBuild and ELIS2-BGO-BuildGateBuild-testSonarInt in parallel for testing of the master code.  The ELIS2-BGO-BuildGateTests is triggered by a successful completion of the ELIS2-BGO-BuildGateBuild, which will test the master branch against a series of test suites.

@@ -1,1 +1,0 @@
-<strong>This job facilitates the checkout of the HEAD of the Integration branch, building + compilation of the code, the execution of all unit and integration tests, and the formal commit of the analysis of the sonar-runner</strong>.

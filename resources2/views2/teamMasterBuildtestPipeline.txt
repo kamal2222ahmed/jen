@@ -1,7 +1,0 @@
-<center><H1>ELIS2 TEAM MASTER BUILD TEST CHECK</H1></center>
-<center><h4>INSTRUCTIONS: Simply click here, enter a branch name with the correct naming convention (so that you can build your team branch on your team FT) and click build!</h4></center>
-<center><h5>SKYNET-TestingTheWorldOneCommitAtATime</h5></center>
-<center><h5>SKYNET_idontliketesting</h5></center>
-<center><h5>***********NO "CI-" or "CI501-" BRANCHES ARE ALLOWED TO BE TESTED HERE. THEY GET AUTOMATICALLY PULLED INTO THE MAIN CI PIPELINE************</h5></center>
-<center><h5>Helpful information: JIRA GIT Sonar CONFLUENCE/WIKI</h5></center>
-<center><h5>CONTACT: email #ELIS2-SKynet@uscis.dhs.gov or on Slack #ci-pipeline #skynet.</h5></center>

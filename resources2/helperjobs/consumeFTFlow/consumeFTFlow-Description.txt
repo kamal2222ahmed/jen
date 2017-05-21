@@ -1,1 +1,0 @@
-<strong>This job ensures that the FT that was picked from the pool is healthy</strong>

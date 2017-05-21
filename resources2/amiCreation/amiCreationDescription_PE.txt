@@ -1,3 +1,0 @@
-This is a job to create an AMI with your Branch's RPM Version. 
-Prerequisite: Your RPM should be available in DT Nexus before running this job.
-"Force" is only to be used if you are re-creating the AMI for an RC that already has an AMI. This will deleted the Old File in Nexus, and put a New File for the ZDD process to pick up the correct AMI. 

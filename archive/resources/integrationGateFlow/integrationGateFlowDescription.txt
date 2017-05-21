@@ -1,7 +1,0 @@
-This phase starts the ELIS2-IntegrationGateFlow which will perform a checkout of the HEAD of the Integration branch. The following two jobs will be kicked off in parallel:
-<p>
-&nbsp; &nbsp;&nbsp; &nbsp;<strong>I-1. ELIS2-IntegrationGateBuild</strong> - This job facilitates the checkout of the HEAD commit of the Integration branch, building + compilation of the code, upload of the build artifacts to nexus as a <strong>RELEASE ARTIFACT.</strong></p>
-<p>
-&nbsp; &nbsp;&nbsp; &nbsp;<strong>I-2. ELIS2-IntegrationGateBuild-testSonarInt </strong>- This job facilitates the checkout of the HEAD of the Integration branch, building + compilation of the code, the execution of all unit and integration tests, and the formal commit of the analysis of the sonar-runner.
-<p>
-<strong>If successful the ELIS2-IntegrationGateFlow will trigger the ELIS2-AcceptanceTest Job Flow which performs Nexus CLM scanning and the Fortify Scan</strong>

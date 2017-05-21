@@ -1,1 +1,0 @@
-<strong>This job deploys your database changes on top of the production version of the applicaiton code. The smoke test is then kicked off when triggered by the Staging Gate</strong>

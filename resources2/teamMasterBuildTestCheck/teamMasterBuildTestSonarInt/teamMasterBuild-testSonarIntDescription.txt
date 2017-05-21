@@ -1,1 +1,0 @@
-Test Tests and Sonar Analysis the ELIS2 App for the Build Gate Tests

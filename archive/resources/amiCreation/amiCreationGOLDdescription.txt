@@ -1,1 +1,0 @@
-Job to Create a gold AMI with the Release Candidate version of RPMs

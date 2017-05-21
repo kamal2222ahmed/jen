@@ -1,6 +1,0 @@
-reportUrl = manager.getEnvVariable("BUILD_URL") + "artifact/" 
-manager.addBadge("text.gif", "View logs", reportUrl + "Apps/Tests/Serenity/target/site/serenity/logs") 
-if(manager.logContains(".*Generating Serenity Reports.*")){ 
-    manager.addBadge("folder-open.gif", "View Report", reportUrl + "Apps/Tests/Serenity/target/site/serenity/index.html") 
-    manager.addBadge("save.gif", "Download Report", reportUrl + "*zip*/archive.zip") 
-}

@@ -1,1 +1,0 @@
-Job to Create an AMI with the Release Candidate version of RPMs on a Single Volume

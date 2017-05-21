@@ -1,3 +1,0 @@
-knife ssh "chef_environment:${ENVIRONMENT} AND role:activemq" "sudo service tomcat7 stop ; sleep 10 ;sudo service activemq-instance-ELIS2-int stop; sudo service activemq-instance-ELIS2-ext stop; sudo rm -rf /opt/apache-activemq-5.11.1/data; sudo service activemq-instance-ELIS2-int start; sudo service activemq-instance-ELIS2-ext start" -a ipaddress -x tomcat7
-sleep 10
-knife ssh "chef_environment:${ENVIRONMENT} AND role:Deployable" -C 1 -a ipaddress -x chef "sudo chef-client -j \"http://${NEXUS}/repository/public/gov/dhs/uscis/elis2/InternalApp/${ARTIFACT_VERSION}/InternalApp-${ARTIFACT_VERSION}.json\""

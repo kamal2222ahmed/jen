@@ -1,5 +1,0 @@
-Could not integrate ($GIT_COMMIT) at this time.  Please see the job output to determine the appropriate remediation.
-
-${BUILD_URL}
-
-$PROJECT_DEFAULT_CONTENT

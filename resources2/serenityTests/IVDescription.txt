@@ -1,5 +1,0 @@
-Runs the IV E2E TestSuite on a given functional test environment
-<p><a href='lastCompletedBuild/artifact/Apps/Tests/Serenity/target/site/serenity/index.html'>View the Serenity Report for the Most Recent Build.</a></p>
-<strong>SoftTech</strong>
-<strong>  | Serenity: YES
-Runs from a Linux Tester Node

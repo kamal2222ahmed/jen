@@ -1,7 +1,0 @@
-echo $(ps aux | grep ffmpeg)
-echo "q" > stop.log || echo "echo failed"
-sleep 20s || echo "sleep failed"
-echo $(ps aux | grep ffmpeg)
-pkill -SIGINT ffmpeg || echo "pkill failed (good)"
-mv serenity-recording.mp4 Apps/Tests/Serenity/target/site/serenity || echo "mv recording failed"
-mv ffmpeg.log Apps/Tests/Serenity/target/site/serenity || echo "mv log failed"

@@ -1,1 +1,0 @@
-<strong>If your ELIS2-BuildGate Build and ELIS2-BuildGate-Tests jobs are both successful (The Jenkins Ball is blue) then your CI- or CI501- Branch will get formally merged with the Staging Branch</strong>

@@ -1,1 +1,0 @@
-<strong>This Snapshot build is stored in the release repository in Nexus, and it will also invoke the AMI Creation JOB PE if it's successful. Please ensure, AMI JOB Creation PE is successful before deploying using ZDD jobs. </strong>

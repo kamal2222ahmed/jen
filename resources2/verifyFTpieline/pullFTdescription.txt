@@ -1,1 +1,0 @@
-Pulls FT from the FT pool.

@@ -1,1 +1,0 @@
-<strong>This is a flow that triggers the DB-Deploy and DB-intTest job in paralell</strong>

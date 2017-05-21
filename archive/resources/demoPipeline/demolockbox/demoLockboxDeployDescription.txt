@@ -1,1 +1,0 @@
-Deploys desired release canidate to the DEMO LOCKBOX environment.

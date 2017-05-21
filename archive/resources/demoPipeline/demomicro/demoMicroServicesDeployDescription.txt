@@ -1,1 +1,0 @@
-Deploys desired release canidate to the DEMO MICRO Services environment.

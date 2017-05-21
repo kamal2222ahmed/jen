@@ -1,3 +1,0 @@
--PpbeKeyFile=${WORKSPACE}/ft/pbe.dat
--PdatabaseServer=${dbip}
--PftWebHost=${tcip}

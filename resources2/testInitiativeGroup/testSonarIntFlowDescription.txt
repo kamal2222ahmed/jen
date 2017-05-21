@@ -1,1 +1,0 @@
-This job will facilitate testing splitting up the Integration Tests in parallel for decreasing the time of execution.

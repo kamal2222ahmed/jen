@@ -1,1 +1,0 @@
-<strong>This job facilitates the checkout of the HEAD commit of the Integration branch, building + compilation of the code, upload of the build artifacts to nexus as a RELEASE ARTIFACT.</strong>

@@ -1,1 +1,0 @@
-The Build Gate Optimization pipeline is designated for testing master code to ensure consistency 

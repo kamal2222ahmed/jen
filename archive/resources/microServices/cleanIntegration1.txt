@@ -1,4 +1,0 @@
--PreleaseDeploy=true
--ParchiveBuildNumber=${BUILD_NUMBER}
--ParchiveBranch=${MAJOR}.${MINOR}.${SPRINT}
--ParchiveRevision=${BUILD_NUMBER}

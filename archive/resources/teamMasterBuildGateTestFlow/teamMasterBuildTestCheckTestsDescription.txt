@@ -1,3 +1,0 @@
-Runs the functional test flow associated with the BUILD GATE against the branch that was entered in the ELIS2-Team-MasterBuildTestCheck-Build of code on a given environment. 
-
-<p><b><font color="red">This job contains all the logs for the test run on the given FT:  Traverse to your run and look at the archived artifacts</font></b></p>

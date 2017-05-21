@@ -1,1 +1,0 @@
-Uploads a file to the Adobe LiveCycle server, overwriting existing templates if they exist.

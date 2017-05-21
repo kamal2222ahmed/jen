@@ -1,1 +1,0 @@
-cp /opt/.g/gradle.properties ./gradle.properties

@@ -1,6 +1,0 @@
--PpbeKeyFile=${WORKSPACE}/ft/pbe.dat
--PdatabaseServer=el2-ft-idb1.aws.uscis.dhs.gov
--PftWebHost=${tcip}
--PdbNum=${TEAM}
--Pnexus=${NEXUS}
--PdbType=RDS

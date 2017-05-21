@@ -1,5 +1,0 @@
-Runs the Lockbox E2E Test Suite on a given functional test environment
-<p><a href='lastCompletedBuild/artifact/Apps/Tests/Serenity/target/site/serenity/index.html'>View the Serenity Report for the Most Recent Build.</a></p>
-<strong>DV United</strong>
-<strong>  | Serenity: YES
-Runs from a Linux Tester Node

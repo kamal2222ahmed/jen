@@ -1,1 +1,0 @@
-ssh -t ec2-user@10.193.129.162 -o StrictHostKeyChecking=no "/tmp/exportIt.sh ${EXTRACT_VERSION}"
